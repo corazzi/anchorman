@@ -9,18 +9,28 @@ namespace Kayrunm\Anchorman\Traits;
 trait Presentable
 {
     /**
-     * The presenter for this view.
-     *
-     * @var string
-     */
-    protected $presenter = "";
-
-    /**
      * The instance of our presenter
      *
      * @var \Kayrunm\Anchorman\Presenter
      */
     protected $presenterInstance;
+
+    /**
+     * Returns the name of this model's presenter.
+     *
+     * @return \Kayrunm\Anchorman\Presenter
+     *
+     * @throws \Kayrunm\Anchorman\PresenterException
+     */
+    public function presenter()
+    {
+        // If the presenter hasn't been declared, throw our exception
+        if (is_null($this->presenter)) {
+            throw new PresenterException();
+        }
+
+        return $this->presenter;
+    }
 
     /**
      * Return an instance of our presenter instead of the fully-qualified
