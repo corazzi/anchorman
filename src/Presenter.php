@@ -2,11 +2,13 @@
 
 namespace Kayrunm\Anchorman;
 
+use Illuminate\Support\String;
+
 abstract class Presenter
 {
     /**
      * The entity that this class will act as a presenter for
-     * @var [type]
+     * @var  \Kayrunm\Anchorman\Presentable
      */
     protected $entity;
 

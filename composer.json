@@ -1,0 +1,16 @@
+{
+    "name": "kayrunm/anchorman",
+    "description": "A simple implementation of a Presenter for classes, built with Laravel in mind.",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^5.4"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kieran Marshall",
+            "email": "kieran@kieranmarshall.co.uk"
+        }
+    ],
+    "minimum-stability": "dev"
+}
