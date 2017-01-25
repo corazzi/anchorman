@@ -13,7 +13,7 @@ trait Presentable
      *
      * @var string
      */
-    protected $presenter;
+    protected $presenter = "";
 
     /**
      * The instance of our presenter
