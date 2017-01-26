@@ -41,6 +41,7 @@ trait Presentable
     public function getPresenterAttribute()
     {
         if (is_null($this->presenterInstance)) {
+            $presenter = $this->presenter;
             $this->presenterInstance = new $presenter($this);
         }
 
