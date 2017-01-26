@@ -2,7 +2,7 @@
 
 namespace Kayrunm\Anchorman;
 
-use Illuminate\Support\String;
+use Illuminate\Support\Str;
 
 abstract class Presenter
 {
