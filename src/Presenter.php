@@ -33,12 +33,12 @@ abstract class Presenter
     public function __get($property)
     {
         // Get a camel-case version of the property called
-        $key = Str::snake($property);
+        $key = Str::camel($property);
 
-        if (method_exists($this, $property)) {
-            return $this->{$property}();
+        if (method_exists($this, $key)) {
+            return $this->{$key}();
         }
 
-        return $this->entity->getAttribute($property);
+        return $this->entity->getAttribute($key);
     }
 }
