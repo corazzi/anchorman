@@ -7,7 +7,7 @@ Create a presenter for your model, e.g., `UserPresenter` and make it extend the 
 
 In the presenter, set up the accessor methods in camelCase for the attribute(s) you want to return. In your views, use snake_case.
 
-For example, `fullName` in your presenter becomes `full_name` in your view.
+For example, `fullName` in your presenter becomes `full_name` in your view. Access the underlying model's attributes by using `$this->entity`.
 
 
 ```php
@@ -19,7 +19,7 @@ class UserPresenter extends Presenter
 {
     public function fullName()
     {
-        return sprintf('%s %s', $this->first_name, $this->last_name);
+        return sprintf('%s %s', $this->entity->first_name, $this->entity->last_name);
     }
 }
 ```
